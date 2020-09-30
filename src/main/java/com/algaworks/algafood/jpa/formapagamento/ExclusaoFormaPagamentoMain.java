@@ -22,7 +22,7 @@ public class ExclusaoFormaPagamentoMain {
 		FormaPagamento formaPagamento = new FormaPagamento();
 		formaPagamento.setId(3L);
 		System.out.printf("Forma de pagamento %s", formaPagamento.getNome());
-		pagamentoRepository.remover(formaPagamento);
+		pagamentoRepository.deleteById(formaPagamento.getId());
 		System.out.printf("excluida com sucesso");
 	}
 

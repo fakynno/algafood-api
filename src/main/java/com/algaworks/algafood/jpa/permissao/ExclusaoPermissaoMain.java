@@ -20,7 +20,7 @@ public class ExclusaoPermissaoMain {
 		
 		Permissao permissao = new Permissao();
 		permissao.setId(2L);
-		permissaoRepository.remover(permissao);
+		permissaoRepository.deleteById(permissao.getId());
 		System.out.printf("removido com sucesso");
 	}
 

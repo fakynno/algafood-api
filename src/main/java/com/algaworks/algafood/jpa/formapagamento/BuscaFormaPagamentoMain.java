@@ -4,6 +4,8 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
+import java.util.Optional;
+
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.domain.model.FormaPagamento;
 import com.algaworks.algafood.domain.repository.FormaPagamentoRepository;
@@ -18,9 +20,9 @@ public class BuscaFormaPagamentoMain {
 		
 		FormaPagamentoRepository pagamentoRepository = applicationContext.getBean(FormaPagamentoRepository.class);
 		
-		FormaPagamento formaPagamento = pagamentoRepository.buscar(5L);
+		Optional<FormaPagamento> formaPagamento = pagamentoRepository.findById(5L);
 		
-		System.out.printf("Forma de pagamento: %s(%s)", formaPagamento.getId(), formaPagamento.getNome());
+		System.out.printf("Forma de pagamento: %s(%s)", formaPagamento.get().getId(), formaPagamento.get().getNome());
 	}
 
 }

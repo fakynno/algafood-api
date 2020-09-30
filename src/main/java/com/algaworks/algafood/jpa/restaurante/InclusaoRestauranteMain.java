@@ -28,8 +28,8 @@ public class InclusaoRestauranteMain {
 		restaurante2.setNome("Thai-Thay good-food");
 		restaurante2.setTaxaFrete(new BigDecimal(4.5));
 		
-		restauranteRepository.salvar(restaurante1);
-		restauranteRepository.salvar(restaurante2);
+		restauranteRepository.save(restaurante1);
+		restauranteRepository.save(restaurante2);
 	}
 
 }

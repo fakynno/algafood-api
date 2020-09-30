@@ -22,7 +22,7 @@ public class AlteracaoFormaPagamentoMain {
 		formaPagamento.setId(1L);
 		formaPagamento.setNome("Pagar com sangue");
 		
-		pagamentoRepository.salvar(formaPagamento);
+		pagamentoRepository.save(formaPagamento);
 		
 		System.out.printf("Forma de pagamento [%s] incluída com sucesso!", formaPagamento.getNome());
 		

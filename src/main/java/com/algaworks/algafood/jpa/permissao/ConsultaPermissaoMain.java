@@ -20,7 +20,7 @@ public class ConsultaPermissaoMain {
 		
 		PermissaoRepository permissaoRepository = applicationContext.getBean(PermissaoRepository.class);
 		
-		List<Permissao> listaPermissao = permissaoRepository.listar();
+		List<Permissao> listaPermissao = permissaoRepository.findAll();
 		
 		System.out.printf("Descrição dos pagamentos: %n");
 		

@@ -22,7 +22,7 @@ public class AlteracaoPermissaoMain {
 		permissao.setId(2L);
 		permissao.setNome("Gravando");
 		
-		permissaoRepository.salvar(permissao);
+		permissaoRepository.save(permissao);
 		System.out.printf("alteração realizada");
 		
 	}

@@ -24,8 +24,8 @@ public class InclusaoCidadeMain {
 		Cidade cidade2 = new Cidade();
 		cidade2.setNome("Campo Grande");
 		
-		cidadeRepository.salvar(cidade1);
-		cidadeRepository.salvar(cidade2);
+		cidadeRepository.save(cidade1);
+		cidadeRepository.save(cidade2);
 		
 		System.out.printf("cadastrado com sucesso");
 		

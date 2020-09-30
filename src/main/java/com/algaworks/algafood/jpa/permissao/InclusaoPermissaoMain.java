@@ -22,7 +22,7 @@ public class InclusaoPermissaoMain {
 		permissao.setNome("alterar");
 		permissao.setDescricao("permite alterar um dado existente no banco");
 		
-		permissaoRepository.salvar(permissao);
+		permissaoRepository.save(permissao);
 		
 		System.out.printf("Registro incluído");
 		

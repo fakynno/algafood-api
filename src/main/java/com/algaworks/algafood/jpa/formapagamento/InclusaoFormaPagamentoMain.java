@@ -25,8 +25,8 @@ public class InclusaoFormaPagamentoMain {
 		FormaPagamento formaPagamento2 = new FormaPagamento();
 		formaPagamento2.setNome("Google Pay");
 		
-		pagamentoRepository.salvar(formaPagamento1);
-		pagamentoRepository.salvar(formaPagamento2);
+		pagamentoRepository.save(formaPagamento1);
+		pagamentoRepository.save(formaPagamento2);
 		
 	}
 

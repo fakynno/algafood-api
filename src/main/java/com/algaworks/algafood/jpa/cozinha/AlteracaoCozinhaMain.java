@@ -22,7 +22,7 @@ public class AlteracaoCozinhaMain {
 		cozinha.setId(3L);
 		cozinha.setNome("Russa");
 		
-		cozinhaRepository.salvar(cozinha);
+		cozinhaRepository.save(cozinha);
 		
 	}
 }

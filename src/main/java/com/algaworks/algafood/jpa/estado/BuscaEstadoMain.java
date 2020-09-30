@@ -4,6 +4,8 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
+import java.util.Optional;
+
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.EstadoRepository;
@@ -18,9 +20,9 @@ public class BuscaEstadoMain {
 		
 		EstadoRepository estadoRepository = applicationContext.getBean(EstadoRepository.class);
 		
-		Estado estado = estadoRepository.buscar(3L);
+		Optional <Estado> estado = estadoRepository.findById(3L);
 		
-		System.out.printf("Estado: %s", estado.getNome());
+		System.out.printf("Estado: %s", estado.get().getNome());
 	}
 
 }

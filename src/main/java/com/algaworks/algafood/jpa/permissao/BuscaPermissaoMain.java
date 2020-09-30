@@ -18,7 +18,7 @@ public class BuscaPermissaoMain {
 		
 		PermissaoRepository permissaoRepository = applicationContext.getBean(PermissaoRepository.class);
 		
-		Permissao permissao = permissaoRepository.buscar(2L);
+		Permissao permissao = permissaoRepository.findById(2L).orElse(null);
 		
 		System.out.printf("Permissão encontrada: %n%S - %s",
 				permissao.getNome(), permissao.getDescricao());

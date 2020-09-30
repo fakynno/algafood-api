@@ -20,10 +20,10 @@ public class ConsultaCidadeMain {
 		
 		CidadeRepository cidadeRepository = applicationContext.getBean(CidadeRepository.class);
 		
-		List<Cidade> listaCidades = cidadeRepository.listar();
+		List<Cidade> listaCidades = cidadeRepository.findAll();
 		
 		listaCidades.forEach(nome -> 
-								System.out.printf("Nome da cidade: %s%n", nome.getNome()));
+								System.out.printf("Nome da cidade => [%s]%n", nome.getNome()));
 	}
 
 }

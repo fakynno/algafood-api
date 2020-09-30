@@ -25,7 +25,7 @@ public class AlteracaoRestauranteMain {
 		restaurante.setNome("BOT - Best of Thai");
 		restaurante.setTaxaFrete(new BigDecimal(6));
 		
-		restauranteRepository.salvar(restaurante);
+		restauranteRepository.save(restaurante);
 		
 		System.out.println("restaurante [" + restaurante.getNome() + "] alterado com sucesso!");		
 		

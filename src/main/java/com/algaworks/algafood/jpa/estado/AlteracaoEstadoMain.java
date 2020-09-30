@@ -22,7 +22,7 @@ public class AlteracaoEstadoMain {
 		estado.setId(3L);
 		estado.setNome("Mato Grosso");
 		
-		estadoRepository.salvar(estado);
+		estadoRepository.save(estado);
 		
 		System.out.println("alterado com sucesso");
 	}

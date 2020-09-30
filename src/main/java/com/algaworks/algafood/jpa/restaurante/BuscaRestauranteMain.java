@@ -4,6 +4,8 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
+import java.util.Optional;
+
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
@@ -18,9 +20,9 @@ public class BuscaRestauranteMain {
 		
 		RestauranteRepository restauranteRepository = applicationContext.getBean(RestauranteRepository.class);
 		
-		Restaurante restaurante = restauranteRepository.buscar(3L);
+		Optional<Restaurante> restaurante = restauranteRepository.findById(3L);
 		
-		System.out.println("Id do restaurante [" + restaurante.getNome() + "] = " + restaurante.getId());
+		System.out.println("Id do restaurante [" + restaurante.get().getNome() + "] = " + restaurante.get().getId());
 		
 		
 	}

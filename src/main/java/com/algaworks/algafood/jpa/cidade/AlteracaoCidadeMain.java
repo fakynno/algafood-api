@@ -19,10 +19,10 @@ public class AlteracaoCidadeMain {
 		CidadeRepository cidadeRepository = applicationContext.getBean(CidadeRepository.class);
 		
 		Cidade cidade = new Cidade();		
-		cidade.setId(2L);
+		cidade.setId(4L);
 		cidade.setNome("Vinhedo");
 		
-		cidadeRepository.salvar(cidade);
+		cidadeRepository.save(cidade);
 		System.out.printf("alterado com sucesso");
 		
 	}
